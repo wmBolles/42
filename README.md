@@ -252,7 +252,7 @@ This repository follows 42's open-source spirit:
 
 ### 🔗 **Connect With Me**
 
-[![42 Profile](https://img.shields.io/badge/42_Profile-000000?style=for-the-badge&logo=42&logoColor=white)](https://profile.intra.42.fr/users/your-login)
+[![42 Profile](https://img.shields.io/badge/42_Profile-000000?style=for-the-badge&logo=42&logoColor=white)](https://profile.intra.42.fr/users/wabolles)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/th3f)
 
 **Questions? Suggestions? Want to collaborate?**  

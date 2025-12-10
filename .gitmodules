@@ -7,3 +7,6 @@
 [submodule "42-Cursus/ft_irc"]
 	path = 42-Cursus/ft_irc
 	url = https://github.com/wmBolles/IRC.git
+[submodule "42-Cursus/Inception"]
+	path = 42-Cursus/Inception
+	url = https://github.com/wmBolles/Inception.git

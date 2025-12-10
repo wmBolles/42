@@ -1,0 +1,3 @@
+[submodule "42-Cursus/42-Cursus/Inception"]
+	path = 42-Cursus/42-Cursus/Inception
+	url = git@github.com:wmBolles/Inception.git

@@ -4,3 +4,6 @@
 [submodule "42-Cursus/42-Cursus/ft_irc"]
 	path = 42-Cursus/42-Cursus/ft_irc
 	url = https://github.com/wmBolles/IRC.git
+[submodule "42-Cursus/ft_irc"]
+	path = 42-Cursus/ft_irc
+	url = https://github.com/wmBolles/IRC.git

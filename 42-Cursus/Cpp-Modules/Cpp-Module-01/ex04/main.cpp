@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <stdlib.h>
 
 void    replace(std::string& line, std::string s1, std::string s2)
 {
@@ -13,6 +14,10 @@ void    replace(std::string& line, std::string s1, std::string s2)
         pos = line.find(s1, pos + s2.length());
     }
 }
+#include <filesystem>
+
+
+
 void    search_and_replace(std::string filename, std::string s1, std::string s2)
 {
     if (filename == "" || s1 == "")
@@ -20,8 +25,16 @@ void    search_and_replace(std::string filename, std::string s1, std::string s2)
         std::cout << "Empty Filename/s1 !" << std::endl;
         exit(EXIT_FAILURE);
     }
-    std::ifstream inFile(filename);
-    std::ofstream outFile(filename + ".replace");
+    std::ifstream inFile(filename.c_str());
+
+    if (std::filesystem::is_directory(filename) || !std::filesystem::exists(filename))
+    {
+        exit(EXIT_FAILURE);
+    }
+
+
+    std::string i = filename + ".replace";
+    std::ofstream outFile(i.c_str());
     if (inFile.fail() || outFile.fail()) {
         std::cout << "failed to open/create file !" << std::endl;
         exit(EXIT_FAILURE);

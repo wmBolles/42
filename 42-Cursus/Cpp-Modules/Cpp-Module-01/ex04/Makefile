@@ -7,7 +7,7 @@ OBJC		=	$(FILE:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJC)
-	$(CC) $(FILE) -o $(NAME)
+	c++ $(FILE) -o $(NAME)
 
 clean:
 	rm -f $(OBJC)

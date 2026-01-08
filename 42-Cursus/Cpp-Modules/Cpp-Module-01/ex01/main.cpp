@@ -12,7 +12,7 @@ int	main(void)
     
     	delete [] z;
 	}
-	catch (std::bad_alloc &tacos_2X_large)
+	catch (std::bad_alloc &tacos_only)
 	{
 	    std::cout << "Nice Try , Better luck next time !" << std::endl;
 	}

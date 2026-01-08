@@ -14,6 +14,6 @@ int	main(void)
 	}
 	catch (std::bad_alloc &tacos_only)
 	{
-	    std::cout << "Nice Try , Better luck next time !" << std::endl;
+	    std::cout << "Stop Stalking my github profile!" << std::endl;
 	}
 }

@@ -1,10 +1,16 @@
 #include "Zombie.hpp"
+#include <exception>
 
 int		main(void)
 {
-	Zombie*	ins = newZombie("Foo");
-	ins->announce();
-
-	delete ins;
-	randomChump("FOO2");
+    try
+    {
+        Zombie*	ins = newZombie("NULL");
+        ins->announce();
+        delete ins;
+        
+        randomChump(NULL);
+    } catch (std::exception &_) {
+        std::cout << _.what() << std::endl;
+    }
 }

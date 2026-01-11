@@ -20,6 +20,12 @@ C::~C()
 	std::cout << "C Destructor Invoked 1" << std::endl; 
 }
 
+// Do not test with following command
+// setarch $(uname -m) -R ./Dynamic
+// Fixing process stack addresses is undefined behavior
+// and using srand()  time(NULL) to depand on the time to set random seeds
+// is just cheating from other 42 students ;)
+
 Base	*generate(void)
 {
 	int		var;
@@ -37,9 +43,7 @@ Base	*generate(void)
 void identify(Base* p)
 {
 	if (dynamic_cast<A *>(p))
-	{
 		std::cout << "class A" << std::endl;
-	}
 	else if (dynamic_cast<B *>(p))
 		std::cout << "class B" << std::endl;
 	else if (dynamic_cast<C *>(p))
@@ -49,8 +53,8 @@ void identify(Base* p)
 void	identify(Base& p)
 {
 	try {
-		A& __attribute__ ((unused))	a = dynamic_cast<A&>(p);
-		std::cout << "Class A" << std::endl;
+		A& __attribute__ ((unused))	a = dynamic_cast<A&>(p); // __attribute__ ((unused)) to avoid unused variable warning instead of casting to void
+		std::cout << "Class A" << std::endl;				 // zidk 7ta hadi gift 
 		return ;
 	}
 	catch (std::exception &base) {

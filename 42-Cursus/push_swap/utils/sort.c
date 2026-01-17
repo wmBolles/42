@@ -12,35 +12,6 @@
 
 #include "push_swap.h"
 
-void	helper_pos(t_node *stack, t_node *curr, int size, int var)
-{
-	int		index;
-
-	index = 0;
-	while (index <= size)
-	{
-		var = 2147483647;
-		curr = stack;
-		while (curr)
-		{
-			if (curr->digit <= var && curr->index == 0)
-				var = curr->digit;
-			curr = curr->next;
-		}
-		curr = stack;
-		while (curr)
-		{
-			if (curr->digit == var)
-			{
-				curr->index = 1;
-				curr->position = index;
-			}
-			curr = curr->next;
-		}
-		index++;
-	}
-}
-
 void	set_pos(t_node **a)
 {
 	t_node	*curr;
